@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steamy Delights</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+    <!-- Header with Logo and Nav -->
+    <header class="navbar">
+        <img src="logo.jpg" alt="Steamy Delights Logo" class="logo">
+        <h1>Steamy Delights</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('menu')">Menu</a></li>
+                <li><a href="#" onclick="showSection('gallery')">Gallery</a></li>
+                <li><a href="#" onclick="showSection('order')">Order</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- HOME SECTION -->
+    <section id="home" class="section active">
+        <img src="logo.jpg" alt="Logo" class="logo">
+        <img src="cover page.jpg" alt="Cover" class="cover-img">
+        <h2>Delicious Frozen Food Delivered Fresh</h2>
+        <p>Order now and enjoy homemade meals in minutes!</p>
+      </section>
+    
+     <!-- Menu Section -->
+      <section id="menu" class="section">
+        <h2>Our Menu</h2>
+        <div class="menue-grid">
+            <div class="menu-items">
+                <img src="Dumplings.jpg" alt="Dumplings">
+                <h3>Dumplings</h3>
+                <p>Steamed and frozen, ready to fry or steam!</p>
+                <p>৳120</p>
+            </div>
+            <div class="menu-items">
+                <img src="veg roll.jpg" alt="veg Rolls">
+                <h3>Veg Roll</h3>
+                <p>Healthy and tasty, pre-packed and frozen.</p>
+                <p>৳50</p>
+            </div>
+            <div class="menu-items">
+                <img src="Corn dogs.jpg" alt="corn dogs">
+                <h3>Corn dogs</h3>
+                <p>Crunchy, golden corn dogs perfect for snacking!</p>
+                <p>৳100</p>
+            </div>
+            <div class="menu-items">
+                <img src="kurkure momos.jpg" alt="Kurkure Momos">
+                <h3>Krkure momos</h3>
+                <p>Scicy , crispy kurkure momos brusting with flavor!</p>
+                <p>৳150</p>
+            </div>
+            <div class="menu-items">
+                <img src="frozen pasta.jpg" alt="frozen Pasta">
+                <h3>Frozen Pasta</h3>
+                <p>Creamy, cheesy, and quick to make!</p>
+                <p>৳80</p>
+         </div>
+         <div class="menu-items">
+            <img src="pan pizza.jpg" alt="Pan Pizza">
+            <h3>Pan Pizza</h3>
+            <p>Thick, cheesy pan pizza loaded with your favorite toppings!</p>
+            <p>৳250</p>
+         </div>
+        </div>
+      </section>
+      <!-- Offer Section with Countdown Timer -->
+       <section id="Offer">
+        <h2> Special Offer</h2>
+        <p>Get 15% off on all items this week!</p>
+        <div id="countdown">
+            <span id="days"></span> Days 
+  <span id="hours"></span> Hours 
+  <span id="minutes"></span> Minutes 
+  <span id="seconds"></span> Seconds
+        </div>
+       </section>
+       <!-- Gallery Section -->
+        <section id="gallery" class="section">
+            <h2>Food Gallery</h2>
+            <div class="gallery">
+                <img src="Dumplings.jpg" alt="Dumplings">
+                <img src="veg roll.jpg" alt="veg roll">
+                <img src="Corn dogs.jpg" alt="corn dogs">
+                <img src="kurkure momos.jpg" alt="Kurkure momos">
+                <img src="frozen pasta.jpg" alt="Frozen pasta">
+                <img src="pan pizza.jpg" alt="pan pizza">
+            </div>
+        </section>
+<!-- Order Form Section -->
+<section id="order" class="section">
+    <h2>Place Your Order</h2>
+    <form id="orderForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="item">Select Item:</label>
+      <select id="item" name="item">
+        <option value="dumplings">Dumplings</option>
+        <option value="vegroll">Veg Roll</option>
+        <option value="pasta">Pasta</option>
+        <option value="corn dogs">Corn Dogs</option>
+        <option value="kurkure momos">Kurkure momos</option>
+        <option value="pan pizza">Pan pizza</option>
+      </select>
+
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" min="1" required>
+
+      <button type="submit">Order Now</button>
+    </form>
+    <p id="form-msg"></p>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Steamy Delights. All rights reserved.</p>
+  </footer>
+  <script src="js.Script"></script>
+</body>
+</html>

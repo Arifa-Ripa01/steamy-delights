@@ -1,0 +1,49 @@
+function showSection(sectionId) {
+  const sections = document.querySelectorAll('.section');
+  sections.forEach(section => {
+    section.classList.remove('active');
+  });
+  const target = document.getElementById(sectionId);
+  if (target) {
+    target.classList.add('active');
+  } else {
+    console.warn("Section not found:", sectionId);
+  }
+}
+const Days =  document.getElementById('days');
+const Hours =  document.getElementById('hours');
+const Minutes =  document.getElementById('minutes');
+const Seconds =  document.getElementById('seconds');
+
+const targetDate =  new Date("June 1 2025 00:00:00").getTime();
+
+function timer () {
+    const currentDate = new Date().getTime();
+    const distance = targetDate - currentDate;
+
+    const days = Math.floor(distance / 1000 / 60 / 60 / 24);
+    const hours = Math.floor(distance / 1000 / 60 / 60) % 24;
+    const minutes = Math.floor(distance / 1000 / 60) % 60;
+    const seconds = Math.floor(distance / 1000) % 60;
+
+    Days.innerHTML = days;
+    Hours.innerHTML = hours;
+    Minutes.innerHTML = minutes;
+    Seconds.innerHTML = seconds;
+    console.log(days+ ":" + hours + ":" + minutes + ":" + seconds);
+}
+setInterval(timer,1000);
+
+
+document.getElementById("orderForm").addEventListener("submit", function (e) {
+  const name = document.getElementById("name").value.trim();
+  const food = document.getElementById("food").value;
+  const address = document.getElementById("address").value.trim();
+
+  if (name === "" || food === "" || address === "") {
+    alert("Please fill out all fields!");
+    e.preventDefault(); // Stop form from submitting
+  } else {
+    alert("Order placed successfully!");
+  }
+});
